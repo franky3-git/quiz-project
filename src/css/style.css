@@ -2,7 +2,7 @@
 	max-width: 70%;
 	border: solid 1px #444;
 	border-radius: 10px;
-	box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+	box-shadow: 8px 10px 5px rgba(0,0,0,.5);
 	color: #eee;
 	padding: 20px;
 	margin: 100px auto 0;
@@ -13,6 +13,7 @@ h1 {
 	text-align: center;
 	padding: 17px 0;
 	border-radius: 25px;
+	font-size: 2.5em;
 }
 hr {
 	background-color: #444;
@@ -20,7 +21,7 @@ hr {
 }
 .question {
 	color: #444;
-	
+	font-size: 1.2em;
 }
 .answers-box {
 	margin-top: 15px;
@@ -37,6 +38,8 @@ hr {
 	justify-content: center;
 	align-items: center;
 	margin: 0 19px;
+	font-size: 1.2em;
+	cursor: pointer;
 }
 .question-info {
 	color: #444;
