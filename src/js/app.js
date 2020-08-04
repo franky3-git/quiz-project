@@ -4,6 +4,7 @@ const question = document.querySelector('.question');
 const answersBox = document.querySelector('.answers-box');
 const actualQuestionBox = document.querySelector('.nber');
 const totalNumberQuestionBox = document.querySelector('.total-number');
+let initVar = true;
 
 const questions = [
 	{question: 'first question', answers: ['first', 'second', 'third', 'fourth'], answer: 'second'},
@@ -31,21 +32,29 @@ function showQuestion() {
 }
 
 function answerQuestion(e) {
-	//log(e.target)
+	
 	if(e.target.parentElement.classList.contains('answer')) {
+		
 		if(confirm('Are you sure you want to submit this answer?')){
 			if(questions[i].answer == e.target.textContent) {
 				score++;
 			}
 			i++;
-			if(i < questions.length) {
-				showQuestion();
-			}
+			//if(i >= questions.length) return;
 		}
 	}
 }
 
-answersBox.addEventListener('click', answerQuestion);
+
+answersBox.addEventListener('click', function(e) {
+	if(i < questions.length) {
+		answerQuestion(e);
+		if(i != questions.length) {
+			showQuestion();
+		}
+	}
+	
+});
 
 showQuestion();
 
